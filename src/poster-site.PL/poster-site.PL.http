@@ -1,0 +1,6 @@
+@poster_site.PL_HostAddress = http://localhost:5022
+
+GET {{poster_site.PL_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
