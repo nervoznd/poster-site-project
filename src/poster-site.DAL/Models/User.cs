@@ -12,5 +12,4 @@ public class User : BaseEntity
     public string PasswordHash { get; set; }
     public string? TelegramUserName { get; set; }
     public int TokenId { get; set; }
-    public DateTime ExpirationDate { get; set; }
 }
