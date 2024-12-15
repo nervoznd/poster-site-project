@@ -2,6 +2,8 @@
 ### SQL:
 Общие:
 - User (UserName, TG)
+- Role (User(f), Role)
+- Tokens (User(f), RefreshToken, AccessToken)
 - Topic (Name, Description)
 - TopicSubscriptions (User(f), Topic(f))
 - Poster (Title, Description, Image, Media(f))
