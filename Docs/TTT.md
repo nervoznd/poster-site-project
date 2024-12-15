@@ -6,7 +6,7 @@
 - TopicSubscriptions (User(f), Topic(f))
 - Poster (Title, Description, Image, Media(f))
 - News (Title, Content, SourceURL, PublishDate, Topic/Media(f))
-- Media (Name, Description, Image, ReleaseDate, IsReleased)
+- Media (Name, Description, Image, ReleaseDate, IsReleased, Genres)
 Дополнительные:
 - MovieDetails
 - SeriesDetails
