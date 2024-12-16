@@ -1,30 +1,27 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using poster_site.DAL.Models;
 
-public class PosterConfiguration : BaseConfiguration<Poster>
+namespace poster_site.DAL.Configurations;
+
+public class TokenConfiguration : BaseConfiguration<Token>
 {
-    public override void Configure(EntityTypeBuilder<Poster> builder)
+    public override void Configure(EntityTypeBuilder<Token> builder)
     {
        base.Configure(builder);
 
-       builder.ToTable("Posters");
+       builder.ToTable("Tokens");
 
-       builder.Property(n => n.Title)
+       builder.Property(n => n.AccessToken)
               .IsRequired()
-              .HasMaxLength(100);
-
-       builder.Property(n => n.Description)
-              .IsRequired(false)
-              .HasMaxLength(2000);
-
-       builder.Property(n => n.ImagePath)
-              .IsRequired(false)
               .HasMaxLength(255);
 
-       builder.HasOne<BaseMedia>()
-              .WithOne()
-              .IsRequired(false)
-              .HasForeignKey(n => n.MediaId)
-              .OnDelete(DeleteBehavior.SetNull);
+       builder.Property(n => n.RefreshToken)
+              .IsRequired()
+              .HasMaxLength(255);
+
+        builder.Property(n => n.ExpirationDate)
+               .IsRequired()
+               .HasColumnType("datetime2");
     }
 }

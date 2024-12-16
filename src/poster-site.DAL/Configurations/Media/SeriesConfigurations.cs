@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using poster_site.DAL.Models;
+
+namespace poster_site.DAL.Configurations;
 
 public class SeriesConfiguration : BaseConfiguration<Series>
 {

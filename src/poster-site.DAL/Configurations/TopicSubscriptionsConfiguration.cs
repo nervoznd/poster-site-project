@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using poster_site.DAL.Models;
+
+namespace poster_site.DAL.Configurations;
 
 public class TopicSubscriptionsConfiguration : BaseConfiguration<TopicSubscriptions>
 {
@@ -9,7 +12,7 @@ public class TopicSubscriptionsConfiguration : BaseConfiguration<TopicSubscripti
 
         builder.ToTable("TopicSubscriptions");
 
-        builder.HasMany(ts => ts.User)
+        builder.HasOne<User>()
                .WithMany(u => u.TopicSubscriptions)
                .HasForeignKey(ur => ur.UserId)
                .OnDelete(DeleteBehavior.Cascade);
