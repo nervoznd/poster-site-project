@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RU/Общая информация.md",
+                "file": "ru/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Общая информация"
+              "title": "README"
             }
           },
           {
@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RU/Архитектура проекта.md",
+                "file": "ru/architecture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Архитектура проекта"
+              "title": "architecture"
             }
           },
           {
@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RU/Модели данных.md",
+                "file": "ru/models.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Модели данных"
+              "title": "models"
             }
           },
           {
@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RU/API документация.md",
+                "file": "ru/api.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "API документация"
+              "title": "api"
             }
           },
           {
@@ -97,12 +97,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TTT.md",
+                "file": "ru/models.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TTT"
+              "title": "models"
             }
           }
         ],
@@ -194,7 +194,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TTT.md",
+                "file": "ru/models.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -204,7 +204,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for TTT"
+              "title": "Backlinks for models"
             }
           },
           {
@@ -213,12 +213,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "TTT.md",
+                "file": "ru/models.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from TTT"
+              "title": "Outgoing links from models"
             }
           },
           {
@@ -240,10 +240,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TTT.md"
+                "file": "ru/models.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of TTT"
+              "title": "Outline of models"
             }
           }
         ]
@@ -265,16 +265,16 @@
   },
   "active": "79df4d97f957af52",
   "lastOpenFiles": [
-    "RU/Подробности реализации.md",
-    "RU/Список задач.md",
-    "RU/Инструкция по развёртыванию.md",
-    "RU/API документация.md",
-    "RU/Модели данных.md",
-    "RU/Архитектура проекта.md",
-    "RU/Общая информация.md",
-    "General information.md",
-    "RU",
+    "ru/README.md",
+    "ru/models.md",
+    "ru/setup.md",
+    "ru/Подробности реализации.md",
+    "ru/architecture.md",
+    "ru/to-do.md",
+    "ru/api.md",
     "TTT.md",
+    "General information.md",
+    "ru",
     "General.md",
     "Welcome.md"
   ]
