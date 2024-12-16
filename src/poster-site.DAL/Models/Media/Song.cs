@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace poster_site.DAL.Models;
 
-public class Topic : BaseEntity
+public class Song : BaseMedia
 {
-    public string TopicName { get; set; }
-    public string? Description { get; set; }
+    public string Artists { get; set; }
+    public int? AlbumId { get; set; }
+    public string? SpotifyURL { get; set; }
 }

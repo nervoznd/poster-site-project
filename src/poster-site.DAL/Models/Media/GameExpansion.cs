@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace poster_site.DAL.Models;
 
-public class Topic : BaseEntity
+public class GameExpansion : BaseMedia
 {
-    public string TopicName { get; set; }
-    public string? Description { get; set; }
+    public int GameId { get; set; }
+    public string Type { get; set; }
 }
