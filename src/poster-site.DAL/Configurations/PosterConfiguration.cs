@@ -6,7 +6,7 @@ namespace poster_site.DAL.Configurations;
 
 public class PosterConfiguration : BaseConfiguration<Poster>
 {
-    public override void Configure(EntityTypeBuilder<Poster> builder)
+    public void Configure(EntityTypeBuilder<Poster> builder)
     {
        base.Configure(builder);
 
@@ -25,7 +25,7 @@ public class PosterConfiguration : BaseConfiguration<Poster>
               .HasMaxLength(255);
 
        builder.HasOne<BaseMedia>()
-              .WithOne()
+              .WithMany()
               .IsRequired(false)
               .HasForeignKey(n => n.MediaId)
               .OnDelete(DeleteBehavior.SetNull);

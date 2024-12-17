@@ -4,12 +4,10 @@ using poster_site.DAL.Models;
 
 namespace poster_site.DAL.Configurations;
 
-public class AlbumConfiguration : BaseConfiguration<Album>
+public class AlbumConfiguration : BaseMediaConfiguration<Album>
 {
-    public override void Configure(EntityTypeBuilder<Album> builder)
+    public void Configure(EntityTypeBuilder<Album> builder)
     {
-        base.Configure(builder);
-
         builder.ToTable("Albums");
 
         builder.HasBaseType<BaseMedia>();

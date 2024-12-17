@@ -4,18 +4,16 @@ using poster_site.DAL.Models;
 
 namespace poster_site.DAL.Configurations;
 
-public class GameExpansionConfiguration : BaseConfiguration<GameExpansion>
+public class GameExpansionConfiguration : BaseMediaConfiguration<GameExpansion>
 {
-    public override void Configure(EntityTypeBuilder<GameExpansion> builder)
+    public void Configure(EntityTypeBuilder<GameExpansion> builder)
     {
-       base.Configure(builder);
-
        builder.ToTable("GameExpansions");
 
        builder.HasBaseType<BaseMedia>();
 
        builder.HasOne<Game>()
-              .WithOne()
+              .WithMany()
               .IsRequired()
               .HasForeignKey(n => n.GameId)
               .OnDelete(DeleteBehavior.SetNull);

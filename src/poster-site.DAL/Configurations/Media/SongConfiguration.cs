@@ -4,12 +4,10 @@ using poster_site.DAL.Models;
 
 namespace poster_site.DAL.Configurations;
 
-public class SongConfiguration : BaseConfiguration<Song>
+public class SongConfiguration : BaseMediaConfiguration<Song>
 {
-    public override void Configure(EntityTypeBuilder<Song> builder)
+    public void Configure(EntityTypeBuilder<Song> builder)
     {
-       base.Configure(builder);
-
        builder.ToTable("Songs");
 
        builder.HasBaseType<BaseMedia>();
@@ -19,7 +17,7 @@ public class SongConfiguration : BaseConfiguration<Song>
               .HasMaxLength(255);
 
        builder.HasOne<Album>()
-              .WithOne()
+              .WithMany()
               .IsRequired(false)
               .HasForeignKey(n => n.AlbumId)
               .OnDelete(DeleteBehavior.SetNull);

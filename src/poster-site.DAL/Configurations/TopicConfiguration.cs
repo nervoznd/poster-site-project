@@ -6,7 +6,7 @@ namespace poster_site.DAL.Configurations;
 
 public class TopicConfiguration : BaseConfiguration<Topic>
 {
-    public override void Configure(EntityTypeBuilder<Topic> builder)
+    public void Configure(EntityTypeBuilder<Topic> builder)
     {
         base.Configure(builder);
 

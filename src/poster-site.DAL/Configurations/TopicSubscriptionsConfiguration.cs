@@ -17,7 +17,7 @@ public class TopicSubscriptionsConfiguration : BaseConfiguration<TopicSubscripti
                .HasForeignKey(ur => ur.UserId)
                .OnDelete(DeleteBehavior.Cascade);
 
-        builder.HasMany(ur => ur.Topic)
+        builder.HasOne<Topic>()
                .WithMany(r => r.TopicSubscriptions)
                .HasForeignKey(ur => ur.TopicId)
                .OnDelete(DeleteBehavior.Cascade);
