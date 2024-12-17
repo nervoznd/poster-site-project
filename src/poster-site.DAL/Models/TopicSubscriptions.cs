@@ -12,6 +12,6 @@ public class TopicSubscriptions : BaseEntity
     public int TopicId { get; set; }
 
     // Navigation properties
-    public  ICollection<User> Users { get; set; } = new HashSet<User>();
-    public  ICollection<Topic> Topics { get; set; } = new HashSet<Topic>();
+    public ICollection<User> Users { get; set; } = new HashSet<User>();
+    public ICollection<Topic> Topics { get; set; } = new HashSet<Topic>();
 }
