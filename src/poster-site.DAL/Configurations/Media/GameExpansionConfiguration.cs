@@ -4,12 +4,10 @@ using poster_site.DAL.Models;
 
 namespace poster_site.DAL.Configurations;
 
-public class GameExpansionConfiguration : BaseConfiguration<GameExpansion>
+public class GameExpansionConfiguration : BaseMediaConfiguration<GameExpansion>
 {
     public void Configure(EntityTypeBuilder<GameExpansion> builder)
     {
-       base.Configure(builder);
-
        builder.ToTable("GameExpansions");
 
        builder.HasBaseType<BaseMedia>();

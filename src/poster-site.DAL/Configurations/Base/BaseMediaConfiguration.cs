@@ -6,11 +6,11 @@ namespace poster_site.DAL.Configurations;
 
 public class BaseMediaConfiguration<T> : BaseConfiguration<BaseMedia>
 {
-    public override void Configure(EntityTypeBuilder<BaseMedia> builder)
+    public void Configure(EntityTypeBuilder<BaseMedia> builder)
     {
+       base.Configure(builder);
+       
        builder.ToTable("BaseMedias");
-
-       builder.HasKey(b => b.Id);
 
        builder.Property(b => b.Name)
               .IsRequired()

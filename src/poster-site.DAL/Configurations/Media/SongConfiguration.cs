@@ -4,12 +4,10 @@ using poster_site.DAL.Models;
 
 namespace poster_site.DAL.Configurations;
 
-public class SongConfiguration : BaseConfiguration<Song>
+public class SongConfiguration : BaseMediaConfiguration<Song>
 {
-    public override void Configure(EntityTypeBuilder<Song> builder)
+    public void Configure(EntityTypeBuilder<Song> builder)
     {
-       base.Configure(builder);
-
        builder.ToTable("Songs");
 
        builder.HasBaseType<BaseMedia>();
