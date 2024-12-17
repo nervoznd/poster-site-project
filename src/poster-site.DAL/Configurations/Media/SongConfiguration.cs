@@ -19,7 +19,7 @@ public class SongConfiguration : BaseConfiguration<Song>
               .HasMaxLength(255);
 
        builder.HasOne<Album>()
-              .WithOne()
+              .WithMany()
               .IsRequired(false)
               .HasForeignKey(n => n.AlbumId)
               .OnDelete(DeleteBehavior.SetNull);

@@ -6,7 +6,7 @@ namespace poster_site.DAL.Configurations;
 
 public class TokenConfiguration : BaseConfiguration<Token>
 {
-    public override void Configure(EntityTypeBuilder<Token> builder)
+    public void Configure(EntityTypeBuilder<Token> builder)
     {
        base.Configure(builder);
 

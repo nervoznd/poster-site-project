@@ -6,7 +6,7 @@ namespace poster_site.DAL.Configurations;
 
 public class GameExpansionConfiguration : BaseConfiguration<GameExpansion>
 {
-    public override void Configure(EntityTypeBuilder<GameExpansion> builder)
+    public void Configure(EntityTypeBuilder<GameExpansion> builder)
     {
        base.Configure(builder);
 
@@ -15,7 +15,7 @@ public class GameExpansionConfiguration : BaseConfiguration<GameExpansion>
        builder.HasBaseType<BaseMedia>();
 
        builder.HasOne<Game>()
-              .WithOne()
+              .WithMany()
               .IsRequired()
               .HasForeignKey(n => n.GameId)
               .OnDelete(DeleteBehavior.SetNull);

@@ -6,7 +6,7 @@ namespace poster_site.DAL.Configurations;
 
 public class NewsConfiguration : BaseConfiguration<News>
 {
-    public override void Configure(EntityTypeBuilder<News> builder)
+    public void Configure(EntityTypeBuilder<News> builder)
     {
        base.Configure(builder);
 
@@ -28,13 +28,13 @@ public class NewsConfiguration : BaseConfiguration<News>
               .IsRequired(false);
 
        builder.HasOne<Topic>()
-              .WithOne()
+              .WithMany()
               .IsRequired()
               .HasForeignKey(n => n.TopicId)
               .OnDelete(DeleteBehavior.Cascade);
 
        builder.HasOne<BaseMedia>()
-              .WithOne()
+              .WithMany()
               .IsRequired(false)
               .HasForeignKey(n => n.MediaId)
               .OnDelete(DeleteBehavior.SetNull);
