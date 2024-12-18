@@ -1,13 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using poster_site.DAL.Models;
+
+namespace poster_site.DAL.Configurations;
 
 public class BaseMediaConfiguration<T> : BaseConfiguration<BaseMedia>
 {
-    public override void Configure(EntityTypeBuilder<T> builder)
+    public void Configure(EntityTypeBuilder<BaseMedia> builder)
     {
-       builder.ToTable("BaseMedia");
-
-       builder.HasKey(b => b.Id);
+       base.Configure(builder);
+       
+       builder.ToTable("BaseMedias");
 
        builder.Property(b => b.Name)
               .IsRequired()

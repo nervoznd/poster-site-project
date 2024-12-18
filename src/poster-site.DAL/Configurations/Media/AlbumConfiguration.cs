@@ -1,12 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using poster_site.DAL.Models;
 
-public class AlbumConfiguration : BaseConfiguration<Album>
+namespace poster_site.DAL.Configurations;
+
+public class AlbumConfiguration : BaseMediaConfiguration<Album>
 {
-    public override void Configure(EntityTypeBuilder<Album> builder)
+    public void Configure(EntityTypeBuilder<Album> builder)
     {
-        base.Configure(builder);
-
         builder.ToTable("Albums");
 
         builder.HasBaseType<BaseMedia>();

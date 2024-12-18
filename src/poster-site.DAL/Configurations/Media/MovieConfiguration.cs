@@ -1,12 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using poster_site.DAL.Models;
 
-public class MovieConfiguration : BaseConfiguration<Movie>
+namespace poster_site.DAL.Configurations;
+
+public class MovieConfiguration : BaseMediaConfiguration<Movie>
 {
-    public override void Configure(EntityTypeBuilder<Movie> builder)
+    public void Configure(EntityTypeBuilder<Movie> builder)
     {
-       base.Configure(builder);
-
        builder.ToTable("Movies");
 
        builder.HasBaseType<BaseMedia>();

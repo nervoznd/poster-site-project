@@ -1,9 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using poster_site.DAL.Models;
+
+namespace poster_site.DAL.Configurations;
 
 public class TopicConfiguration : BaseConfiguration<Topic>
 {
-    public override void Configure(EntityTypeBuilder<Topic> builder)
+    public void Configure(EntityTypeBuilder<Topic> builder)
     {
         base.Configure(builder);
 

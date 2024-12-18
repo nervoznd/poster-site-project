@@ -1,12 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using poster_site.DAL.Models;
 
-public class GameConfiguration : BaseConfiguration<Game>
+namespace poster_site.DAL.Configurations;
+
+public class GameConfiguration : BaseMediaConfiguration<Game>
 {
-    public override void Configure(EntityTypeBuilder<Game> builder)
+    public void Configure(EntityTypeBuilder<Game> builder)
     {
-       base.Configure(builder);
-
        builder.ToTable("Games");
 
        builder.HasBaseType<BaseMedia>();
