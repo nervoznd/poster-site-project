@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using poster_site.DAL;
@@ -11,9 +12,11 @@ using poster_site.DAL;
 namespace poster_site.DAL.Migrations
 {
     [DbContext(typeof(PosterSiteDbContext))]
-    partial class PosterSiteDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241219162959_FixForegianKeys")]
+    partial class FixForegianKeys
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

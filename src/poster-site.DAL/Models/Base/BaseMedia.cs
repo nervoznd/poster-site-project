@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace poster_site.DAL.Models;
+﻿namespace poster_site.DAL.Models;
 
 public abstract class BaseMedia : BaseEntity
 {
@@ -15,4 +9,8 @@ public abstract class BaseMedia : BaseEntity
     public bool? IsDateAccurate { get; set; }
     public bool IsReleased { get; set; }
     public string? Genres { get; set; }
+
+    // Navigation properties
+    public ICollection<News> News { get; set; } = new HashSet<News>();
+    public ICollection<Poster> Posters { get; set; } = new HashSet<Poster>();
 }

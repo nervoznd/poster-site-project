@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace poster_site.DAL.Models;
+﻿namespace poster_site.DAL.Models;
 
 public class Game : BaseMedia
 {
@@ -13,4 +7,7 @@ public class Game : BaseMedia
     public string? Developers { get; set; }
     public string? Publishers { get; set; }
     public string? Platforms { get; set; }
+
+    // Navigation properties
+    public ICollection<GameExpansion> GameExpansions { get; set; } = new HashSet<GameExpansion>();
 }

@@ -27,7 +27,7 @@ public class PosterConfiguration : BaseConfiguration<Poster>
        builder.HasOne<BaseMedia>()
               .WithMany()
               .IsRequired(false)
-              .HasForeignKey(n => n.MediaId)
+              .HasForeignKey(n => n.BaseMediaId)
               .OnDelete(DeleteBehavior.SetNull);
     }
 }
