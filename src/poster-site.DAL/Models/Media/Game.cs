@@ -13,4 +13,7 @@ public class Game : BaseMedia
     public string? Developers { get; set; }
     public string? Publishers { get; set; }
     public string? Platforms { get; set; }
+
+    // Navigation properties
+    public ICollection<GameExpansion> GameExpansions { get; set; } = new HashSet<GameExpansion>();
 }

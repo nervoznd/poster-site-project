@@ -16,4 +16,5 @@ public class User : BaseEntity
     // Navigation properties
     public ICollection<TopicSubscriptions> TopicSubscriptions { get; set; } = new HashSet<TopicSubscriptions>();
     public ICollection<UserRole> UserRoles { get; set; } = new HashSet<UserRole>();
+    public Token Token { get; set; }
 }

@@ -14,4 +14,8 @@ public class News : BaseEntity
     public DateTime? PublishDate { get; set; }
     public int TopicId { get; set; }
     public int? MediaId { get; set; }
+
+    // Navigation properties
+    public Topic Topic { get; set; }
+    public BaseMedia? Media { get; set; }
 }
