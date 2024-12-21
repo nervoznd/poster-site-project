@@ -1,6 +1,6 @@
 namespace poster_site.DAL.Interfaces;
 
-interface IRepository<T> : IDisposable where T : class
+public interface IRepository<T> : IDisposable where T : class
 {
     Task<IEnumerable<T>> GetAllAsync();
     Task<T> GetByIdAsync(int id);
