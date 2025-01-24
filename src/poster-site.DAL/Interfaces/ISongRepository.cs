@@ -2,7 +2,7 @@
 
 namespace poster_site.DAL.Interfaces;
 
-public interface ISongRepository : IBaseMediaRepository<Song>
+public interface ISongRepository : IRepository<Song>
 {
 
 }

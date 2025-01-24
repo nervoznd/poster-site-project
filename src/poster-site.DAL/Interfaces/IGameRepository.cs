@@ -2,7 +2,7 @@
 
 namespace poster_site.DAL.Interfaces;
 
-public interface IGameRepository : IBaseMediaRepository<Game>
+public interface IGameRepository : IRepository<Game>
 {
 
 }

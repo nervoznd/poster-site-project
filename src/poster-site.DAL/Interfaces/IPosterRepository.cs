@@ -2,7 +2,7 @@
 
 namespace poster_site.DAL.Interfaces;
 
-public interface IPosterRepository<T> : IRepository<Poster>
+public interface IPosterRepository : IRepository<Poster>
 {
 
 }

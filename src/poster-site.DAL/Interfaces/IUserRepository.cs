@@ -2,7 +2,7 @@
 
 namespace poster_site.DAL.Interfaces;
 
-public interface IUserRepository<T> : IRepository<User>
+public interface IUserRepository : IRepository<User>
 {
 
 }

@@ -2,7 +2,7 @@
 
 namespace poster_site.DAL.Interfaces;
 
-public interface ITopicSubscriptionsRepository<T> : IRepository<TopicSubscriptions>
+public interface ITopicSubscriptionsRepository : IRepository<TopicSubscriptions>
 {
 
 }

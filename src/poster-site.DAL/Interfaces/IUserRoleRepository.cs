@@ -2,7 +2,7 @@
 
 namespace poster_site.DAL.Interfaces;
 
-public interface IUserRoleRepository<T> : IRepository<UserRole>
+public interface IUserRoleRepository : IRepository<UserRole>
 {
 
 }

@@ -2,7 +2,7 @@
 
 namespace poster_site.DAL.Interfaces;
 
-public interface INewsRepository<T> : IRepository<News>
+public interface INewsRepository : IRepository<News>
 {
 
 }

@@ -2,7 +2,7 @@
 
 namespace poster_site.DAL.Interfaces;
 
-public interface IMovieRepository : IBaseMediaRepository<Movie>
+public interface IMovieRepository : IRepository<Movie>
 {
 
 }

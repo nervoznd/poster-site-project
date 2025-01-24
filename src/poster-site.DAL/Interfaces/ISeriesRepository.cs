@@ -2,7 +2,7 @@
 
 namespace poster_site.DAL.Interfaces;
 
-public interface ISeriesRepository : IBaseMediaRepository<Series>
+public interface ISeriesRepository : IRepository<Series>
 {
 
 }

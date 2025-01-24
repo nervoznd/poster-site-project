@@ -2,7 +2,7 @@
 
 namespace poster_site.DAL.Interfaces;
 
-public interface ITokenRepository<T> : IRepository<Token>
+public interface ITokenRepository : IRepository<Token>
 {
 
 }

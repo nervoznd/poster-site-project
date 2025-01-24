@@ -2,7 +2,7 @@
 
 namespace poster_site.DAL.Interfaces;
 
-public interface IAlbumRepository : IBaseMediaRepository<Album>
+public interface IAlbumRepository : IRepository<Album>
 {
 
 }
